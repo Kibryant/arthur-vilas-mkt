@@ -1,103 +1,87 @@
 import Image from "next/image";
+import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+ const links = [
+    {
+      name: "WhatsApp",
+      url: "https://api.whatsapp.com/send/?phone=73933009905&text&type=phone_number&app_absent=0",
+      ariaLabel: "Conectar no WhatsApp",
+      icon: <FaWhatsapp />,
+      bg: "bg-[#25D366] hover:bg-[#1ebe5a] focus:ring-[#25D366]",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/arthurvboass",
+      ariaLabel: "Conectar no LinkedIn",
+      icon: <FaLinkedin />,
+      bg: "bg-[#0077B5] hover:bg-[#00669c] focus:ring-[#0077B5]",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/vilasmktE",
+      ariaLabel: "Seguir no Instagram",
+      icon: <FaInstagram />,
+      bg: "bg-gradient-to-r from-[#f58529] via-[#dd2a7b] to-[#8134af] hover:from-[#e67625] focus:ring-[#dd2a7b]",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+  return (
+    <main className="min-h-screen  bg-gradient-to-br from-accent/5 via-background to-accent/10 flex flex-col items-center justify-center p-4">
+      <div className="w-full max-w-md mx-auto space-y-6">
+        {/* Logo Section */}
+        <div className="text-center mb-8">
+          <div className="mx-auto mb-4 w-28 h-28 relative">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/logo.png"
+              alt="Logo Arthur Vilas"
+              layout="fill"
+              objectFit="contain"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          
+          <h1 className="text-3xl font-extrabold">
+            Arthur Vilas – Growth Marketing
+          </h1>
+          <p className="mt-2 text-secondary">
+            🔥 Tráfego pago com foco em resultado!<br />
+            👨‍💻 Especialista em Meta & Google Ads.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+
+        {/* Links Section */}
+        <div className="space-y-4">
+          {links.map((link) => {
+            return (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.ariaLabel}
+                className={`
+                  ${link.bg}
+                  w-full flex items-center justify-center gap-3 
+                  py-4 px-6 rounded-3xl text-white font-semibold text-lg
+                  transition-all duration-200 ease-in-out
+                  hover:scale-105 hover:shadow-lg
+                  focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
+                  active:scale-95
+                `}
+              >
+                <span className="text-2xl">{link.icon}</span>
+                <span>{link.name}</span>
+              </a>
+            )
+          })}
+        </div>
+
+        {/* Footer */}
+        <div className="text-center pt-8">
+          <p className="text-secondary text-xs">© 2025 Arthur Vilas - Growth Marketing</p>
+          <p className="text-secondary text-xs">Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </main>
+  )
 }

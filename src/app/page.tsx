@@ -175,7 +175,7 @@ export default function Home() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left text-gray-700 font-medium py-2 hover:text-emerald-500 transition-colors"
+                  className="block w-full text-left text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors"
                 >
                   {item.name}
                 </button>
@@ -203,9 +203,15 @@ export default function Home() {
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4">
           <div className="text-center space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-accent/10 rounded-full px-6 py-2 text-sm font-medium text-accent shadow-lg">
-              <div className="w-2 h-2 bg-whatsapp rounded-full animate-pulse"></div>
-              <span>🚀 Especialista em Tráfego Pago</span>
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 backdrop-blur-sm border border-emerald-400/30 rounded-full px-8 py-4 text-sm font-semibold text-white shadow-2xl hover:scale-105 transition-all duration-300">
+              <div className="relative">
+                <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                <div className="absolute inset-0 w-3 h-3 bg-emerald-400 rounded-full animate-ping opacity-75"></div>
+              </div>
+              <span className="bg-gradient-to-r from-emerald-300 to-blue-300 bg-clip-text text-transparent font-bold">
+                🚀 Especialista em Tráfego Pago
+              </span>
+              <div className="bg-emerald-400/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-bold">ONLINE</div>
             </div>
 
             {/* Logo */}
@@ -248,13 +254,35 @@ export default function Home() {
                     <div className="text-xs text-background">Clientes</div>
                 </div>
               </div>
+            </div>
+            
+              {/* Main CTA - Single Button */}
+              <div className="flex justify-center">
+                <button
+                  onClick={() => scrollToSection("servicos")}
+                  className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-whatsapp via-linkedin to-instagram-pink animate-gradient text-white font-black text-2xl md:text-3xl px-16 py-3 rounded-3xl hover:scale-110 transition-all duration-500 shadow-2xl hover:shadow-purple-500/50 animate-pulse hover:animate-none border-4 border-white/30"
+                  aria-label="Descobrir como aumentar faturamento"
+                >
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
 
-            <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
-              <div className="w-6 h-10 border-2 border-background/30 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-background/50 rounded-full mt-2 animate-pulse"></div>
+                  {/* Content */}
+                  <div className="relative z-10 flex items-center gap-4">
+                    <div className="text-center">
+                      <div className="text-2xl md:text-3xl font-black leading-tight">QUERO SABER MAIS</div>
+                    </div>
+                  </div>
+
+                  {/* Floating badges */}
+                  <div className="absolute -top-4 -left-4 bg-yellow-400 text-black text-sm font-black px-4 py-2 rounded-full animate-bounce shadow-lg">
+                    DESCOBRIR
+                  </div>
+
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 group-hover:animate-pulse"></div>
+                </button>
               </div>
-            </div>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -332,7 +360,7 @@ export default function Home() {
           </div>
 
           <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
-            Pronto para DOBRAR
+            PRONTO PARA DOBRAR
             <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
                SEU FATURAMENTO?
             </span>

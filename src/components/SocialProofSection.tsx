@@ -11,15 +11,14 @@ export const SocialProofSection = () => {
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                        Histórias de Sucesso e{" "}
+                        Cases Reais de{" "}
                         <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
-                            Crescimento
+                            Advogados Reais
                         </span>
                     </h2>
 
                     <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Confira os bastidores do faturamento dos nossos clientes.
-                        Estratégias validadas que geram retorno sobre o investimento.
+                        Resultados comprováveis de escritórios que investiram em captação estratégica de clientes.
                     </p>
                 </div>
 

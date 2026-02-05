@@ -12,6 +12,8 @@ import {
     FaTrophy,
     FaArrowUp,
     FaBars,
+    FaArrowRight,
+    FaClipboardList
 } from "react-icons/fa6"
 import { SocialProofSection } from "@/components/SocialProofSection"
 
@@ -73,24 +75,24 @@ export default function Home() {
         {
             icon: <FaTrophy className="text-3xl text-whatsapp" />,
             title: "Meta Ads",
-            description: "Campanhas otimizadas no Facebook e Instagram com foco em conversão e ROI máximo.",
+            description: "Campanhas no Facebook e Instagram que posicionam você como autoridade na sua área de atuação e atraem clientes ideais (Trabalhista, Família, Criminal, Cível, Previdenciário).",
         },
         {
             icon: <FaBullseye className="text-3xl text-linkedin" />,
             title: "Google Ads",
-            description: "Anúncios estratégicos no Google para capturar leads qualificados no momento certo.",
+            description: "Apareça quando potenciais clientes pesquisam \"advogado trabalhista perto de mim\" ou \"como dar entrada em divórcio\". Leads quentes que precisam dos seus serviços AGORA.",
         },
         {
             icon: <FaChartLine className="text-3xl text-instagram-pink" />,
             title: "Textos Persuasivos",
-            description: "Criação de copywriting envolvente que converte visitantes em clientes fiéis.",
+            description: "Textos persuasivos que respeitam as normas da OAB e convertem visitantes em agendamentos de consulta. Da landing page ao WhatsApp.",
         },
     ]
 
     const results = [
-        { number: "200+", label: "Campanhas Criadas" },
-        { number: "1M+", label: "Leads Gerados" },
-        { number: "100+", label: "Clientes Atendidos" },
+        { number: "50+", label: "Escritórios Atendidos" },
+        { number: "5.000+", label: "Consultas Geradas" },
+        { number: "R$ 2M+", label: "Honorários para Clientes" },
     ]
 
     const navItems = [
@@ -141,15 +143,14 @@ export default function Home() {
                             ))}
                         </nav>
 
-                        {/* CTA Button */}
                         <div className="hidden md:flex items-center gap-4">
                             <a
-                                href="https://api.whatsapp.com/send/?phone=73933009905&text=Olá Arthur! Quero uma consultoria GRATUITA sobre tráfego pago.&type=phone_number&app_absent=0"
+                                href="https://form.typeform.com/to/I3WIOewW"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 bg-emerald-600 text-white font-bold text-xs uppercase tracking-widest px-8 py-3.5 rounded-full hover:bg-emerald-500 hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_10px_20px_-10px_rgba(16,185,129,0.5)]"
                             >
-                                <FaWhatsapp className="text-sm" />
+                                <FaArrowRight className="text-sm" />
                                 <span>Consultoria Grátis</span>
                             </a>
                         </div>
@@ -184,13 +185,13 @@ export default function Home() {
                             ))}
                             <div className="pt-4 border-t border-gray-200">
                                 <a
-                                    href="https://api.whatsapp.com/send/?phone=73933009905&text=Olá Arthur! Quero uma consultoria GRATUITA sobre tráfego pago.&type=phone_number&app_absent=0"
+                                    href="https://form.typeform.com/to/I3WIOewW"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold text-sm px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
-                                    <FaWhatsapp className="text-base" />
+                                    <FaArrowRight className="text-base" />
                                     <span>Consultoria Grátis</span>
                                 </a>
                             </div>
@@ -235,10 +236,10 @@ export default function Home() {
                         {/* Value Proposition */}
                         <div className="max-w-3xl mx-auto">
                             <p className="text-xl md:text-2xl text-background leading-relaxed mb-6">
-                                <span className="font-semibold text-primary">Transformo seu investimento em vendas reais</span>
+                                <span className="font-semibold text-primary">Atraia clientes qualificados para seu escritório de advocacia</span>
                                 <br />
-                                com estratégias de tráfego pago que{" "}
-                                <span className="text-primary font-semibold">realmente funcionam</span>
+                                Estratégias de tráfego pago especializadas para advogados que{" "}
+                                <span className="text-primary font-semibold">querem crescer sem depender só de indicações</span>
                             </p>
 
                             {/* Stats Preview */}
@@ -363,18 +364,18 @@ export default function Home() {
                         <span>🚀 Última Chance de Garantir Sua Vaga</span>
                     </div>
 
-                    <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
-                        PRONTO PARA DOBRAR
+                    <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
+                        PRONTO PARA CRESCER SEU ESCRITÓRIO
                         <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                            SEU FATURAMENTO?
+                            SEM DEPENDER SÓ DE INDICAÇÕES?
                         </span>
                     </h2>
 
                     <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-4xl mx-auto leading-relaxed">
-                        Não perca mais tempo com estratégias que não funcionam.
+                        Não perca mais tempo esperando o telefone tocar.
                     </p>
                     <p className="text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto">
-                        Vamos criar uma estratégia de tráfego pago personalizada para o seu negócio em uma
+                        Vamos criar uma estratégia de captação de clientes personalizada para a sua área de atuação em uma
                         <span className="font-bold text-yellow-300"> consultoria 100% GRATUITA</span>
                     </p>
 
@@ -383,42 +384,79 @@ export default function Home() {
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                             <div className="text-3xl mb-3">🎯</div>
                             <h3 className="font-bold text-white mb-2">Análise Gratuita</h3>
-                            <p className="text-white/80 text-sm">Diagnóstico completo do seu negócio</p>
+                            <p className="text-white/80 text-sm">Diagnóstico completo do potencial do seu escritório</p>
                         </div>
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                             <div className="text-3xl mb-3">📈</div>
                             <h3 className="font-bold text-white mb-2">Estratégia Personalizada</h3>
                             <p className="text-white/80 text-sm">
-                                Para a sua empresa!
+                                Para sua área de atuação jurídica
                             </p>
                         </div>
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                             <div className="text-3xl mb-3">⚡</div>
                             <h3 className="font-bold text-white mb-2">Resultados Rápidos</h3>
                             <p className="text-white/80 text-sm">
-                                Primeiros resultados em menos de 30 dias!
+                                Primeiras consultas em menos de 30 dias!
                             </p>
                         </div>
                     </div>
 
-                    {/* Main CTAs */}
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
                         <a
-                            href="https://api.whatsapp.com/send/?phone=73933009905&text=Olá Arthur! Quero agendar minha consultoria GRATUITA sobre tráfego pago. Estou pronto para escalar meu negócio!&type=phone_number&app_absent=0"
+                            href="https://form.typeform.com/to/I3WIOewW"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative inline-flex items-center gap-4 bg-white text-emerald-600 font-bold text-xl px-12 py-6 rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/25"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <FaWhatsapp className="text-3xl relative z-10" />
+                            <FaClipboardList className="text-3xl relative z-10" />
                             <div className="relative z-10">
                                 <div className="text-xl font-black">QUERO MINHA CONSULTORIA</div>
-                                <div className="text-sm font-medium opacity-80">100% Gratuita • Sem Compromisso</div>
+                                <div className="text-sm font-medium opacity-80">100% Gratuita • Ética e OAB Friendly</div>
                             </div>
                             <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-bounce">
                                 GRÁTIS
                             </div>
                         </a>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Lawyers Need Paid Traffic Section */}
+            <section className="py-20 px-4 bg-white" id="por-que-trafego-pago">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                            Por que Advogados Precisam de{" "}
+                            <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+                                Tráfego Pago?
+                            </span>
+                        </h2>
+                        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            A captação estratégica é o divisor de águas entre o escritório que espera indicações e o que domina o mercado.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            { title: "Independência de Indicações", desc: "Pare de depender da sorte ou do networking tradicional para fechar novos contratos." },
+                            { title: "Previsibilidade de Caixa", desc: "Tenha um fluxo constante e previsível de novos casos entrando no seu CRM todos os meses." },
+                            { title: "Autoridade no Nicho", desc: "Seja visto por quem realmente precisa do seu serviço no momento em que a dor jurídica aparece." },
+                            { title: "Perfil de Cliente Ideal", desc: "Filtre sua captação para atrair apenas os casos mais lucrativos para o seu escritório." },
+                            { title: "Escala Sustentável", desc: "Cresça seu faturamento e sua banca sem precisar de uma estrutura física gigantesca." },
+                            { title: "Conformidade Ética", desc: "Estratégias pensadas para respeitar 100% os provimentos da OAB sobre publicidade." },
+                        ].map((item, index) => (
+                            <div key={index} className="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all">
+                                <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-800 mb-4">{item.title}</h3>
+                                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -471,15 +509,19 @@ export default function Home() {
 
                             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                                 <p>
-                                    <strong className="text-gray-800">Meu nome é Arthur Vilas</strong>, e minha jornada no universo digital começou cedo, aos 14 anos, quando a vontade de conectar pessoas e oportunidades online já era evidente.
+                                    <strong className="text-gray-800">Meu nome é Arthur Vilas</strong>, e nos últimos 3 anos me especializei em algo muito específico: ajudar advogados a conquistarem clientes pela internet de forma ética e em conformidade com a OAB.
                                 </p>
 
                                 <p>
-                                    Há <strong className="text-emerald-600">3 anos</strong>, mergulhei profundamente no <strong className="text-gray-800">Tráfego Pago</strong>, e desde então, tenho a satisfação de gerar resultados expressivos para empresas de diversos nichos.
+                                    Trabalho com escritórios de advocacia das mais diversas áreas - de advogados iniciantes que querem construir sua carteira até bancas estabelecidas que desejam expandir para novos nichos.
                                 </p>
 
                                 <p>
-                                    Meu foco é transformar seu investimento em <strong className="text-purple-600">crescimento real e mensurável</strong>.
+                                    Entendo os desafios únicos do mercado jurídico: a necessidade de construir autoridade, a importância da confiança, e como captar o cliente certo para cada especialização.
+                                </p>
+
+                                <p>
+                                    Meu foco é transformar seu investimento em <strong className="text-purple-600">cases reais e carteira preenchida</strong>.
                                 </p>
                             </div>
                         </div>

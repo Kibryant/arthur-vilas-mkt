@@ -49,11 +49,11 @@ export default function Home() {
 
     const socialLinks = [
         {
-            name: "WhatsApp",
-            url: "https://api.whatsapp.com/send/?phone=73933009905&text&type=phone_number&app_absent=0",
-            ariaLabel: "Conectar no WhatsApp",
-            icon: <FaWhatsapp />,
-            bg: "bg-whatsapp hover:bg-whatsapp-dark focus:ring-whatsapp",
+            name: "Consultoria",
+            url: "https://form.typeform.com/to/I3WIOewW",
+            ariaLabel: "Agendar Consultoria Grátis",
+            icon: <FaClipboardList />,
+            bg: "bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-500",
         },
         {
             name: "LinkedIn",
@@ -85,7 +85,7 @@ export default function Home() {
         {
             icon: <FaChartLine className="text-3xl text-instagram-pink" />,
             title: "Textos Persuasivos",
-            description: "Textos persuasivos que respeitam as normas da OAB e convertem visitantes em agendamentos de consulta. Da landing page ao WhatsApp.",
+            description: "Textos persuasivos que respeitam as normas da OAB e convertem visitantes em agendamentos de consulta. Da landing page ao formulário.",
         },
     ]
 
@@ -200,7 +200,7 @@ export default function Home() {
                 </div>
             </header>
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900" id="hero">
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark" id="hero">
 
                 {/* Content */}
                 <div className="relative z-10 w-full max-w-6xl mx-auto px-4">
@@ -301,7 +301,7 @@ export default function Home() {
             )}
 
             {/* Services Section */}
-            <section className="py-20 px-4 bg-white/50" id="servicos">
+            <section className="py-20 px-4" id="servicos">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Meus Serviços</h2>
@@ -328,7 +328,7 @@ export default function Home() {
             </section>
 
             {/* Results Section */}
-            <section className="py-20 px-4 bg-white" id="resultados">
+            <section className="py-20 px-4" id="resultados">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Resultados Comprovados</h2>
@@ -348,7 +348,7 @@ export default function Home() {
 
             <SocialProofSection />
 
-            <section className="relative py-24 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 overflow-hidden">
+            <section className="relative py-24 px-4 bg-brand-dark overflow-hidden">
                 {/* Background Elements */}
                 <div className="absolute inset-0 bg-black/10"></div>
                 <div className="absolute top-0 left-0 w-full h-full">
@@ -424,7 +424,7 @@ export default function Home() {
             </section>
 
             {/* Why Lawyers Need Paid Traffic Section */}
-            <section className="py-20 px-4 bg-white" id="por-que-trafego-pago">
+            <section className="py-20 px-4" id="por-que-trafego-pago">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
@@ -461,7 +461,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="py-24 px-4 bg-white/50" id="sobre">
+            <section className="py-24 px-4" id="sobre">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         {/* Photo Column */}
@@ -530,7 +530,7 @@ export default function Home() {
             </section>
 
 
-            <section className="py-20 px-4 bg-white/50" id="contato">
+            <section className="py-20 px-4" id="contato">
                 {/* Social Links Section */}
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
@@ -557,7 +557,7 @@ export default function Home() {
                                             ? "bg-green-100 text-green-600"
                                             : index === 1
                                                 ? "bg-blue-100 text-blue-600"
-                                                : "bg-gradient-to-r from-pink-100 to-purple-100 text-pink-600"
+                                                : "bg-linear-to-r from-pink-100 to-purple-100 text-pink-600"
                                             }`}
                                     >
                                         <span className="text-3xl">{link.icon}</span>
@@ -569,7 +569,7 @@ export default function Home() {
                                             } group-hover:gap-3 transition-all duration-200`}
                                     >
                                         <span>
-                                            Acessar Perfil
+                                            Acessar {index === 0 ? "Formulário" : index === 1 ? "Perfil" : "Perfil"}
                                         </span>
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -585,7 +585,7 @@ export default function Home() {
 
 
             {/* Footer */}
-            <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+            <footer className="bg-brand-dark text-white">
                 {/* Copyright Bar */}
                 <div className="border-t border-gray-700 py-6 px-4 bg-black/30">
                     <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">

@@ -2,7 +2,7 @@ import { ImageCarousel } from "./ImageCarousel";
 
 export const SocialProofSection = () => {
     return (
-        <section className="py-20 px-4 bg-white/50" id="social-proof">
+        <section className="py-20 px-4" id="social-proof">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 rounded-full px-4 py-2 text-sm font-medium mb-6">
